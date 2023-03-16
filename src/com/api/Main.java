@@ -23,6 +23,20 @@ public class Main {
 		System.out.println(numbers);
 
 		List<Book> list = new ArrayList<>();
+		// creating books
+		Book b1 = new Book("Noro", 10);
+		Book b2 = new Book("Noro123", 100);
+		Book b3 = new Book("69584", 1000);
+		Book b4 = new Book("Nor", 500);
+		Book b5 = new Book("Norbert", 510);
+		Book b6 = new Book("NoroVozar", 0);
+		// filling the list
+		list.add(b1);
+		list.add(b2);
+		list.add(b3);
+		list.add(b4);
+		list.add(b5);
+		list.add(b6);
 
 		List<String> under100Books = list.stream().filter(book -> book.getPrice() < 100).map(Book::getName).sorted()
 				.toList();
